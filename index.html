@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>css-layout decomposition</title>
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <ol>
+            <li>calculate non flexible nodes' dimension</li>
+            <li>allocate space for flex node</li>
+            <li>calculate nodes' position at main axis</li>
+            <li>calculate nodes' position at cross axis</li>
+            <li>set trailing position if neccessary</li>
+            <li>calculate absolute nodes' dimensions</li>
+        </ol>
+        <div class="row simple-case">
+            <div class="col-sm-4">
+                <div class="player">
+                    <div class="start-overlay">
+                        <div class="start">
+                            <span class="glyphicon glyphicon-play"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <ol>
+                    <li>calculate A & C's dimension</li>
+                    <li>allocate space for B</li>
+                    <li>calculate nodes'position at main & cross axis</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bundle.js"></script>
+</body>
+
+</html>
